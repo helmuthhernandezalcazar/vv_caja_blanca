@@ -21,7 +21,7 @@ public class TestNumPalabras {
 	@Test
 	public void numPalabrasCaso1() {
 		assertThrows(IllegalArgumentException.class, () -> {
-		editor.numPalabras(-1, 10, "");
+		editor.numPalabras(-1, 1, "");
 	  });
 	}
 	
@@ -31,7 +31,7 @@ public class TestNumPalabras {
 		editor.leerFichero("hola.txt");
 		//System.out.println("Tamaño fichero: " + editor.size());
 		assertThrows(IllegalArgumentException.class, () -> {
-		editor.numPalabras(0, 1, "");
+		editor.numPalabras(1, 3, "");
 	  });
 	}
 	
@@ -62,7 +62,6 @@ public class TestNumPalabras {
 	@Test
 	public void numPalabrasCaso7() {
 		editor.leerFichero("hola.txt");
-		System.out.println("Tamaño fichero: " + editor.size());
 		int result = editor.numPalabras(1,2,"hola");
 		assertEquals(1, result);
 	}
