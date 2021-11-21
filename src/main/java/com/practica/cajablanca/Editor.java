@@ -3,6 +3,7 @@ package com.practica.cajablanca;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
+import java.io.IOException;
 
 import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
@@ -196,7 +197,7 @@ public class Editor {
 		}
 	}
 
-	public static void main(String[] args) throws EmptyCollectionException {
-	
+	public static void main(String[] args) throws EmptyCollectionException, IOException {
+
 	}
 }
