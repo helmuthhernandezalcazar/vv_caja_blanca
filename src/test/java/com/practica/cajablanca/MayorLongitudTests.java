@@ -57,7 +57,6 @@ public class MayorLongitudTests {
 		
 		try {
 			assertNull(editor.mayorLongitud());
-			System.out.println(editor.mayorLongitud());
 		}catch(EmptyCollectionException e) {
 			System.out.println("Error");
 		}
@@ -90,33 +89,7 @@ public class MayorLongitudTests {
 		}
 	}
 	
-	@Test
-	@DisplayName("Test del camino 5: una palabra después de la primera no es mayor")
-	public void testMayorLongitud5() {
-		Editor editor = new Editor();
-		
-		try {
-			
-			File testCamino5txt = new File("Test_Camino_5.txt");
-			testCamino5txt.createNewFile();
-			
-			FileWriter fw = new FileWriter("Test_Camino_5.txt");
-			fw.write("Hola\nHey oye");
-			fw.close();
-			
-			editor.leerFichero("Test_Camino_5.txt");
-			
-		}catch(IOException e) {
-			e.getStackTrace();
-		}
 
-		try {
-			assertEquals("Hola", editor.mayorLongitud());
-		}catch(EmptyCollectionException e) {
-			System.out.println("Error");
-		}
-	}
-	
 	@Test
 	@DisplayName("Test del camino 6: una palabra después de la primera es mayor")
 	public void testMayorLongitud6() {
