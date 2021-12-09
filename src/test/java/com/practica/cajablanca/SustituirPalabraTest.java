@@ -17,14 +17,14 @@ public class SustituirPalabraTest {
 		editor = new Editor();
 	}
 	
-	@DisplayName("Test camino 1: A-M")
+	@DisplayName("Test camino 1: editor vacio")
 	@Test
 	public void camino1SustituirPalabra() {	
 		this.editor.sustituirPalabra("avion", "coche");
 		assertEquals(0, this.editor.size());		
 	}
 	
-	@DisplayName("Test camino 2: A-B-C-D-E-J-K-L-M")
+	@DisplayName("Test camino 2: lista vacia")
 	@Test
 	public void camino2SustituirPalabra() throws EmptyCollectionException  {	
 		this.editor.leerFichero("vacio.txt");
@@ -33,7 +33,7 @@ public class SustituirPalabraTest {
 		assertEquals(0, this.editor.getLinea(1).size());		
 	}
 	
-	@DisplayName("Test camino 3: A-B-C-D-E-F-G-I-E-J-K-L-M")
+	@DisplayName("Test camino 3: modificar palabra")
 	@Test
 	public void camino3SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("avion.txt");
@@ -44,7 +44,7 @@ public class SustituirPalabraTest {
 		assertEquals(1, this.editor.getLinea(1).size());		
 	}
 	
-	@DisplayName("Test camino 4: A-B-C-D-E-F-H-I-E-J-K-L-M")
+	@DisplayName("Test camino 4: no modifica palabra porque no es la buscada")
 	@Test
 	public void camino4SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("avion.txt");
@@ -55,7 +55,7 @@ public class SustituirPalabraTest {
 		assertEquals(1, this.editor.getLinea(1).size());	
 	}
 
-	@DisplayName("Test camino 5: A-B-C-D-E-J-K-C-D-E-J-K-C-D-E-J-K-L-M")
+	@DisplayName("Test camino 5: dos listas vacias")
 	@Test
 	public void camino5SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("vacio.txt");
