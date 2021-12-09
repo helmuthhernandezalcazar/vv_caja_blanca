@@ -43,6 +43,13 @@
 			<artifactId>junit-platform-suite</artifactId>
 			<version>1.8.1</version>
 			<scope>test</scope>
+		</dependency>
+		<dependency>
+		  <groupId>com.singleList</groupId>
+		  <artifactId>SingleList</artifactId>
+		  <version>0.0.1-SNAPSHOT</version>
+		  <scope>system</scope>
+		  <systemPath>${project.basedir}/src/libs/SingleList.jar</systemPath>
 		</dependency>	
 	</dependencies>
 

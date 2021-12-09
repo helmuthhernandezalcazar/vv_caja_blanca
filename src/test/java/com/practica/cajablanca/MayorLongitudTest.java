@@ -13,7 +13,7 @@ import org.junit.jupiter.api.Test;
 
 import com.cajanegra.EmptyCollectionException;
 
-public class MayorLongitudTests {
+public class MayorLongitudTest {
 	
 	@Test
 	@DisplayName("Test del camino 1: fichero vacío")

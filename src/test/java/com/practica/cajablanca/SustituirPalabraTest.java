@@ -1,25 +1,20 @@
 package com.practica.cajablanca;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-
 import org.junit.jupiter.api.Test;
 
-import com.cajanegra.AbstractSingleLinkedListImpl;
 import com.cajanegra.EmptyCollectionException;
-import com.cajanegra.SingleLinkedListImpl;
 
-class caminos {
+public class SustituirPalabraTest {
+
 	private Editor editor;
-	private AbstractSingleLinkedListImpl<String> lista;
-	private String palabra = "avion";
 	
 	@BeforeEach
 	public void setUp() {
 		editor = new Editor();
-		lista = new SingleLinkedListImpl<String>();
 	}
 	
 	@DisplayName("Test camino 1: A-M")

@@ -1,17 +1,15 @@
 package com.practica.cajablanca;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
+public class NumPalabrasTest {
 
-
-
-public class TestNumPalabras {
 	private Editor editor;
 
-	
 	@BeforeEach
 	public void setUp() {
 		editor = new Editor();
@@ -21,18 +19,17 @@ public class TestNumPalabras {
 	@Test
 	public void numPalabrasCaso1() {
 		assertThrows(IllegalArgumentException.class, () -> {
-		editor.numPalabras(-1, 1, "");
-	  });
+			editor.numPalabras(-1, 1, "");
+		});
 	}
 	
 	@DisplayName("Caso 2: Fin mayor que editor size")
 	@Test
 	public void numPalabrasCaso2() {
 		editor.leerFichero("hola.txt");
-		//System.out.println("Tamaño fichero: " + editor.size());
 		assertThrows(IllegalArgumentException.class, () -> {
-		editor.numPalabras(1, 3, "");
-	  });
+			editor.numPalabras(1, 3, "");
+		});
 	}
 	
 	@DisplayName("Caso 3: editor no contiene nada")
@@ -65,6 +62,4 @@ public class TestNumPalabras {
 		int result = editor.numPalabras(1,2,"hola");
 		assertEquals(1, result);
 	}
-
-
 }
