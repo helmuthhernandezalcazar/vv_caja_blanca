@@ -17,15 +17,15 @@ public class SustituirPalabraTest {
 		editor = new Editor();
 	}
 	
-	@DisplayName("Test camino 1: editor vacio")
 	@Test
+	@DisplayName("Test camino 1: editor vacio")
 	public void camino1SustituirPalabra() {	
 		this.editor.sustituirPalabra("avion", "coche");
 		assertEquals(0, this.editor.size());		
 	}
 	
-	@DisplayName("Test camino 2: lista vacia")
 	@Test
+	@DisplayName("Test camino 2: lista vacia")
 	public void camino2SustituirPalabra() throws EmptyCollectionException  {	
 		this.editor.leerFichero("vacio.txt");
 		assertEquals(1, this.editor.size());
@@ -33,8 +33,8 @@ public class SustituirPalabraTest {
 		assertEquals(0, this.editor.getLinea(1).size());		
 	}
 	
-	@DisplayName("Test camino 3: modificar palabra")
 	@Test
+	@DisplayName("Test camino 3: modificar palabra")
 	public void camino3SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("avion.txt");
 		assertEquals(1, this.editor.size());		
@@ -44,8 +44,8 @@ public class SustituirPalabraTest {
 		assertEquals(1, this.editor.getLinea(1).size());		
 	}
 	
-	@DisplayName("Test camino 4: no modifica palabra porque no es la buscada")
 	@Test
+	@DisplayName("Test camino 4: no modifica palabra porque no es la buscada")
 	public void camino4SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("avion.txt");
 		assertEquals(1, this.editor.size());		
@@ -55,8 +55,8 @@ public class SustituirPalabraTest {
 		assertEquals(1, this.editor.getLinea(1).size());	
 	}
 
-	@DisplayName("Test camino 5: dos listas vacias")
 	@Test
+	@DisplayName("Test camino 5: dos listas vacias")
 	public void camino5SustituirPalabra() throws EmptyCollectionException {	
 		this.editor.leerFichero("vacio.txt");
 		this.editor.leerFichero("vacio.txt");
