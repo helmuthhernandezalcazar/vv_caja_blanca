@@ -1,6 +1,5 @@
 package com.practica.cajablanca;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.junit.jupiter.api.Assertions.assertTrue;
@@ -62,10 +61,15 @@ public class GeneralEditorTest {
 		editor.numPalabras();
 	}
 	
+	
 	@Test
-	public void numPalabra() throws EmptyCollectionException {
+	public void numPalabraAvion() throws EmptyCollectionException {
 		editor.leerFichero("avion.txt");
 		editor.numPalabras();
 	}
-	
+
+	@Test
+	public void mayorLongitudEditorVacio() throws EmptyCollectionException {
+		editor.mayorLongitud();
+	}
 }
